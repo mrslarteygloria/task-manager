@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f2e36d">
+  <meta name="description" content="A colorful study task pinboard.">
+  <title>Campus Pinboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="pinboard-app">
+    <header class="topbar"><a class="brand" href="#" aria-label="Campus Pinboard home"><span class="brand-number">09</span><span>THE STUDY PINBOARD</span></a><span class="local-label"><i></i> SAVED ON THIS DEVICE</span></header>
+    <section class="board-header" aria-label="Pinboard summary"><div><p class="header-kicker" id="today-label">CAMPUS NOTES / TODAY</p><h1>Things to get done<span>!</span></h1></div><div class="stats"><div><strong id="open-count">0</strong><span>OPEN</span></div><div><strong id="done-count">0</strong><span>DONE</span></div></div></section>
+    <form class="task-form" id="task-form" novalidate><label class="visually-hidden" for="task-title">Task name</label><input id="task-title" name="title" type="text" maxlength="120" placeholder="Pin a new task..." autocomplete="off" required><label class="visually-hidden" for="task-course">Subject or course</label><input id="task-course" name="course" type="text" maxlength="60" placeholder="Class / subject" autocomplete="off"><button type="submit"><span>Pin it</span><span aria-hidden="true">↗</span></button><p class="form-error" id="form-error" role="alert" hidden>Add a task name before pinning.</p></form>
+    <div class="board-controls"><div class="filters" role="group" aria-label="Filter tasks"><button type="button" class="filter is-active" data-filter="all" aria-pressed="true">All pins <span id="all-count">0</span></button><button type="button" class="filter" data-filter="active" aria-pressed="false">To do</button><button type="button" class="filter" data-filter="completed" aria-pressed="false">Done</button></div><button type="button" class="clear-button" id="clear-completed" hidden>Clear done</button></div>
+    <section class="pinboard" aria-label="Study tasks"><ul class="task-grid" id="task-grid"></ul><div class="empty-state" id="empty-state"><span class="empty-mark" aria-hidden="true">+</span><div><h2 id="empty-title">Nothing pinned yet</h2><p id="empty-copy">Add a task above. Your study list starts here.</p></div></div></section>
+    <footer class="footer"><span>PIN THE PLAN. MAKE IT HAPPEN.</span><span id="footer-count">0 PINS</span></footer>
+  </main>
+</body>
+</html>
